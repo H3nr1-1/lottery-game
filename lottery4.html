@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<meta charset="UTF-8">
+		<title>Lottery Game</title>
+	</head>
+	<body>
+	<script>
+	
+	
+	alert("Welcome to the lottery game! \n\nThe computer will randomly select three number between 1 and 10.  Your goal is to guess the 3 numbers!  \n\nOne match wins you $100! \nTwo matches wins you $200! \nThree matches wins you $500!");
+
+	var num1 = parseInt(prompt("Guess a number 1-10."));		
+	var num2 = parseInt(prompt("Guess another number 1-10."));
+	var num3 = parseInt(prompt("Guess one last number 1-10."));	
+	var random1 = Math.floor(Math.random() * 9 + 1);
+	var random2 = Math.floor(Math.random() * 9 + 1);
+	var random3 = Math.floor(Math.random() * 9 + 1);
+
+	do {
+
+
+
+	
+	if(num1 == random1 && num2 == random2 && num3 == random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2  + " " + num3 + "\nYou got 3 right!" + "\nYou've won $500!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 == random2 && num2 == random3 && num3 == random1) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2  + " " + num3 + "\nYou got 3 right!" + "\nYou've won $500!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 == random3 && num2 == random1 && num3 == random2) {		
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2  + " " + num3 + "\nYou got 3 right!" + "\nYou've won $500!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random1 && num2 == random2 && num3 == random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" + "\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random2 && num2 == random3 && num3 == random1) {		
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" + "\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1!= random3 && num2 == random1 && num3 == random2) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" + "\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+
+	else if(num1 == random1 && num2 == random2 && num3 != random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" +"\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	 
+	else if(num1 == random2 && num2 == random3 && num3 != random1) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" +"\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 == random3 && num2 == random1 && num3 != random2) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" +"\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+		
+	else if(num1 == random1 && num2 != random2 && num3 == random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" +"\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");	
+	}
+	
+	else if(num1 == random2 && num2 != random3 && num3 == random1) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" +"\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 == random3 && num2 != random1 && num3 == random2) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 2 right!" +"\nYou've won $200!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random1 && num2 != random2 && num3 == random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random2 && num2 != random3 && num3 == random1) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random3 && num2 != random1 && num3 == random2) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	
+	else if(num1 != random1 && num2 == random2 && num3 != random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100!" + "\n\n" + "Would you like to play again? (Y or N)");	
+	}
+	
+	else if(num1 != random2 && num2 == random3 && num3 != random1) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random3 && num2 == random1 && num3 != random2) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " " + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100!" + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 == random1 && num2 != random2 && num3 != random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " "  + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100." + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 == random2 && num2 != random3 && num3 != random1) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " "  + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100." + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 == random3 && num2 != random1 && num3 != random2) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " "  + num2 + " " + num3 + "\nYou got 1 right!" + "\nYou've won $100." + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random1 && num2 != random2 && num3 != random3) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " "  + num2 + " " + num3 + "\nYou got 0 right!" + "\nYou've won $0." + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random2 && num2 != random3 && num3 != random1) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " "  + num2 + " " + num3 + "\nYou got 0 right!" + "\nYou've won $0." + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+	else if(num1 != random3 && num2 != random1 && num3 != random2) {
+		prompt("The computers numbers are " + random1 + " " + random2 + " " + random3 + "\nYour guesses were " + num1 + " "  + num2 + " " + num3 + "\nYou got 0 right!" + "\nYou've won $0." + "\n\n" + "Would you like to play again? (Y or N)");
+	}
+	
+
+	}
+	
+	while(again != "N") {
+		
+	var again = "N".toUpperCase();
+	
+	
+	if(again == "N") {
+		again = true;
+		
+	}
+	
+	}
+	
+		
+	</script>	
+	</body>
+</html>
